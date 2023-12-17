@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "769465268300",
+    "project_id": "lawyeup",
+    "storage_bucket": "lawyeup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769465268300:android:aecb10f8dce19f372edce9",
+        "android_client_info": {
+          "package_name": "com.lawyerup.nighatahmad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0HnxiZNpmA-4c_3M9oP_Mm4yNuwreasA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
