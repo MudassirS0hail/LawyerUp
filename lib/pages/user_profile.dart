@@ -30,33 +30,32 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(
               children: const [
                 Text(
-                  'User',
+                  'User Profile',
                   style: TextStyle(
                     fontSize: 24,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    // fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
-                  ' Profile',
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.black,
-                  ),
-                ),
+                // Text(
+                //   ' Profile',
+                //   style: TextStyle(
+                //     fontSize: 22,
+                //     color: Color.fromARGB(255, 255, 255, 255),
+                //   ),
+                // ),
               ],
             ),
           ),
           elevation: 0.0,
           titleSpacing: 0.0,
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 35, 66, 80),
           actionsIconTheme: const IconThemeData(color: Colors.black),
           automaticallyImplyLeading: false,
         ),

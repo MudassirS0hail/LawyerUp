@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iec_project/controllers/getpost_controller.dart';
 import 'package:iec_project/controllers/post_controller.dart';
+import 'package:iec_project/pages/chat.dart';
 import 'package:iec_project/utils/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,7 +33,7 @@ class _PostsState extends State<Posts> {
                   builder: (ctx) {
                     return Container(
                       padding: const EdgeInsets.all(12.0),
-                      height: MediaQuery.of(context).size.height * 0.7,
+                      height: MediaQuery.of(context).size.height * 0.85,
                       color: Colors.white,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -114,26 +115,26 @@ class _PostsState extends State<Posts> {
           child: Row(
             children: const [
               Text(
-                'Company',
+                'Company Posts',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  // fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
-                ' Posts',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.black,
-                ),
-              ),
+              // Text(
+              //   ' Posts',
+              //   style: TextStyle(
+              //     fontSize: 22,
+              //     color: Colors.black,
+              //   ),
+              // ),
             ],
           ),
         ),
         elevation: 0.0,
         titleSpacing: 0.0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 35, 66, 80),
         actionsIconTheme: const IconThemeData(color: Colors.black),
         automaticallyImplyLeading: false,
       ),
@@ -202,9 +203,13 @@ class _PostsState extends State<Posts> {
                                                             color: Color(
                                                                 0xFF2C5364),
                                                           ),
-                                                          Text(controller
-                                                              .posts[index]
-                                                              .location!),
+                                                          Text(
+                                                            controller
+                                                                .posts[index]
+                                                                .location!,
+                                                            style: TextStyle(
+                                                                fontSize: 12),
+                                                          ),
                                                         ],
                                                       ),
                                                     ),
@@ -244,8 +249,24 @@ class _PostsState extends State<Posts> {
                                                               }
                                                             },
                                                             child:
-                                                                Text("Send CV"))
-                                                        : Text("")
+                                                                Text("Email"))
+                                                        : Text(""),
+                                                    ElevatedButton(
+                                                        style: ButtonStyle(
+                                                            backgroundColor:
+                                                                MaterialStateProperty
+                                                                    .all(Color(
+                                                                        0xFF2C5364))),
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  const ChatPage(),
+                                                            ),
+                                                          );
+                                                        },
+                                                        child: Text("Chat"))
                                                   ],
                                                 )
                                               ],

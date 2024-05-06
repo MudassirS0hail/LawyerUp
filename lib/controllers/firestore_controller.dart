@@ -58,7 +58,7 @@ class FirestoreController extends GetxController {
       isLoading = true;
       update();
     } catch (e) {
-      Get.snackbar('error', e.toString());
+      // Get.snackbar('error', e.toString());
     }
   }
 
@@ -80,7 +80,7 @@ class FirestoreController extends GetxController {
             url: users['url']));
       }
     } catch (e) {
-      Get.snackbar('error', e.toString());
+      // Get.snackbar('error', e.toString());
     }
   }
 }

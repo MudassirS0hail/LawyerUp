@@ -33,7 +33,7 @@ class CompanyData extends GetxController {
       isloading = true;
       update();
     } catch (e) {
-      Get.snackbar('error', e.toString());
+      // Get.snackbar('error', e.toString());
     }
   }
 }

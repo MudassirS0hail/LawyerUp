@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:iec_project/models/user_model.dart';
-import 'package:iec_project/pages/company_posts.dart';
+// import 'package:iec_project/pages/company_posts.dart';
 import 'package:iec_project/pages/job_seekers.dart';
 import 'package:iec_project/pages/posts.dart';
 import 'package:iec_project/pages/settings.dart';
 import 'package:iec_project/pages/user_profile.dart';
+import 'package:iec_project/pages/chat.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,10 +21,11 @@ class _HomePageState extends State<HomePage> {
   int index = 0;
   final screens = const [
     JobSeekers(),
-    Company(),
+    ChatPage(),
+    // Company(),
     Posts(),
     UserProfile(),
-    Settings()
+    Settings(),
   ];
 
   @override
@@ -56,18 +58,25 @@ class _HomePageState extends State<HomePage> {
                     label: "Lawyers"),
                 NavigationDestination(
                     icon: Icon(
+                      Icons.chat,
+                      color: Colors.white,
+                      size: 25,
+                    ),
+                    label: "Chat"),
+                NavigationDestination(
+                    icon: Icon(
                       CupertinoIcons.search,
                       color: Colors.white,
                       size: 25,
                     ),
-                    label: "Law Firms"),
-                NavigationDestination(
-                    icon: Icon(
-                      CupertinoIcons.book,
-                      color: Colors.white,
-                      size: 25,
-                    ),
-                    label: "Firm Posts"),
+                    //     label: "Law Firms"),
+                    // NavigationDestination(
+                    //     icon: Icon(
+                    //       CupertinoIcons.book,
+                    //       color: Colors.white,
+                    //       size: 25,
+                    //     ),
+                    label: "Jobs"),
                 NavigationDestination(
                     icon: Icon(
                       CupertinoIcons.profile_circled,
@@ -81,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                       size: 25,
                     ),
-                    label: "Settings")
+                    label: "Settings"),
               ]),
         ),
       ),

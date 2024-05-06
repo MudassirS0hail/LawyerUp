@@ -32,7 +32,7 @@ class GetCurrentPostsController extends GetxController {
       isLoading = true;
       update();
     } catch (e) {
-      Get.snackbar("error", e.toString());
+      // Get.snackbar("error", e.toString());
     }
   }
 }

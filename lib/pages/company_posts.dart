@@ -28,7 +28,7 @@ class _CompanyState extends State<Company> {
             Align(
               alignment: Alignment.topLeft,
               child: Text(
-                'Companies',
+                'Lawyers',
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.black,

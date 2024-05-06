@@ -21,37 +21,67 @@ class _JobSeekersState extends State<JobSeekers> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      appBar: AppBar(
+        title: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Row(
+            children: const [
+              Text(
+                'LawyerUp',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  // fontWeight: FontWeight.bold,
+                ),
+              ),
+              // Text(
+              //   ' ',
+              //   style: TextStyle(
+              //     fontSize: 22,
+              //     color: Colors.black,
+              //   ),
+              // ),
+            ],
+          ),
+        ),
+        elevation: 0.0,
+        titleSpacing: 0.0,
+        backgroundColor: Color.fromARGB(255, 35, 66, 80),
+        actionsIconTheme:
+            const IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
+        automaticallyImplyLeading: false,
+      ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(0.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                'LawyerUp',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Container(
-                width: double.infinity,
-                height: 2,
-                color: Colors.grey[300],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: Text(
+            //     'LawyerUp',
+            //     style: TextStyle(
+            //       fontSize: 24,
+            //       color: Colors.black,
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            // ),
+            // const SizedBox(
+            //   height: 15,
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            //   child: Container(
+            //     width: double.infinity,
+            //     height: 2,
+            //     color: Colors.grey[300],
+            //   ),
+            // ),
+            // const SizedBox(
+            //   height: 20,
+            // ),
             Expanded(
               child: GetBuilder<FirestoreController>(
                 init: FirestoreController(),

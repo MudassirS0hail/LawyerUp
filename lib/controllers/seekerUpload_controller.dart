@@ -54,7 +54,7 @@ class SeekerUploadController extends GetxController {
       Get.offAll(HomePage());
       isUploading.value = false;
       Get.snackbar("data writed", "data is written",
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           titleText: Text("data successfully uploaded"),
           messageText: Text("Data uploaded succcesfully"));
     }).catchError((onError) {

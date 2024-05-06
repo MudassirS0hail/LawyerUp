@@ -35,7 +35,7 @@ class Authcontroller extends GetxController {
     if (user == null) {
       Get.offAll(() => const SplashScreen());
     } else if (user.displayName != null && first_time == true) {
-      Get.offAll(() => const UserOptions());
+      // Get.offAll(() => const UserOptions());
     } else {
       Get.offAll(() => const HomePage());
     }
@@ -50,7 +50,7 @@ class Authcontroller extends GetxController {
     } on FirebaseAuthException catch (e) {
       isUploading.value = false;
       Get.snackbar("about user", "user message",
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           titleText: const Text("account creation failed"),
           messageText: Text(e.toString()));
     } catch (e) {
@@ -70,7 +70,7 @@ class Authcontroller extends GetxController {
     } on FirebaseAuthException catch (e) {
       isUploading.value = false;
       Get.snackbar("about user", "user message",
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           titleText: const Text("sign in failed"),
           messageText: Text(e.toString()));
       print(e.message);
