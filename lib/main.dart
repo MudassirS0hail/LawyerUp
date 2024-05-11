@@ -5,6 +5,7 @@ import 'package:iec_project/controllers/auth_controller.dart';
 import 'package:iec_project/pages/introduction.dart';
 
 import 'package:iec_project/pages/job_seekers.dart';
+import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 
@@ -31,6 +32,10 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Color.fromARGB(255, 19, 35, 43), // Status bar color
+    ));
+
     return GetMaterialApp(
       title: 'Flutter App',
       theme: ThemeData(
