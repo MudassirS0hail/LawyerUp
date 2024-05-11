@@ -24,7 +24,7 @@ class UserOptions extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
-                "Are you a new user? what's on your mind?",
+                "New To LawyerUp? Make a Public Profile",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -36,7 +36,7 @@ class UserOptions extends StatelessWidget {
                 height: 40,
               ),
               UserCards(
-                text: "Want to Hire people for your organization?",
+                text: "Going Through legal Troubles and want to LawyerUp?",
                 icon: CupertinoIcons.building_2_fill,
                 WidgetPage: const CompanyBio(),
               ),
@@ -44,7 +44,7 @@ class UserOptions extends StatelessWidget {
                 height: 30,
               ),
               UserCards(
-                text: "Looking for a job? what are you waiting for?",
+                text: "You're a Lawyer looking for clients? Say No More! ",
                 icon: CupertinoIcons.search_circle_fill,
                 WidgetPage: const SeekerBio(),
               ),

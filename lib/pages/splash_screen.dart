@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               width: 200,
               height: 200,
-              child: Image.asset("assets/asdasdasdasdasdasdasdas.png"),
+              child: Image.asset("assets/ashdkjashdjkashgdasgkdjsa.png"),
             ),
             const SizedBox(height: 20),
             const textAnimation(
